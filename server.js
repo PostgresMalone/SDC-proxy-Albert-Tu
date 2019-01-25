@@ -15,7 +15,7 @@ app.use('/homes/:id/suggestions', express.static(path.join(__dirname, './public'
 app.use(BodyParser.json());
 app.use(BodyParser.urlencoded({ extended: true }));
 
-app.use('/homes/:id/suggestions', proxy({ target: 'http://localhost:3050', changeOrigin: true }))
+app.use('/homes/:id/suggestions', proxy({ target: 'http://ec2-18-191-190-96.us-east-2.compute.amazonaws.com:3050', changeOrigin: true }))
 
 // app.get(`/homes/:Id/suggestions`, (req, res) => {
 // 	request(`http://localhost:3050/homes/${req.params.Id}/suggestions`, (err, response, body) => {
